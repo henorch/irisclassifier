@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: blue;
+        }
+        div{
+            margin: 1rem;
+        }
+        div label {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        div input{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/predict">
+        <h1>Enter the Characteristics of you Flower</h1>
+        <div>
+            <label>Sepal Width</label>
+            <input type="number" name="sepal_width" placeholder="Enter value"/>
+        </div>
+           <div>
+            <label>Sepal Length</label>
+            <input type="number" name="sepal_length"  placeholder="Enter value"/>
+        </div>
+         <div>
+            <label>Petal Width</label>
+            <input type="number" name="petal_width"  placeholder="Enter value"/>
+        </div>
+           <div>
+            <label>Petal Length</label>
+            <input type="number"  name="petal_length" placeholder="Enter value"/>
+        </div>
+        <button type="submit">Predict</button>
+
+    </form>
+
+       {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+
+    
+</body>
+</html>
