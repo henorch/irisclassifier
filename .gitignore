@@ -1,1 +1,24 @@
-.venv/
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pkle
+*.log
+
+# Virtual environment
+venv/
+
+
+# Environment/config files
+.env
+.DS_Store
+
+# VSCode / JetBrains / others
+.vscode/
+.idea/
+
+# Git
+.git/
+
